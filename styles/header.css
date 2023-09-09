@@ -1,0 +1,149 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 55px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+    border-bottom: 1px solid rgb(199, 198, 198);
+    z-index: 100;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.middle-section {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    /* keep max width when resizing */
+    max-width: 500px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    margin-right: 24px;
+    /* dont shrink elements when resizing */
+    flex-shrink: 0;
+}
+
+.hamburger-menu {
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.yt-logo {
+    height: 20px;
+}
+
+.search-button {
+    width: 66px;
+    height: 40px;
+    background-color: rgb(241, 240, 240);
+    border: 1px solid rgb(211, 210, 210);
+    margin-left: -1px;
+    margin-right: 10px;
+}
+
+.voice-search-button {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 20px;
+    background-color: rgb(243, 242, 242);
+}
+
+.voice-search-icon {
+    height: 24px;
+}
+
+.search-bar {
+    flex: 1;
+    height: 18px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(211, 210, 210);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.05);
+    /* removes default width/ */
+    width: 0;
+}
+
+.search-bar::placeholder {
+    font-family: Roboto, Arial;
+    font-size: 16px;
+}
+
+.search-icon {
+    height: 25px;
+}
+.search-button,.voice-search-button, .upload-icon-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.search-button .tooltip,.voice-search-button .tooltip,.upload-icon-container .tooltip,.apps-icon-container .tooltip, .notification-icon-container .tooltip{
+    font-family: Roboto,Arial;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.search-button:hover .tooltip, .voice-search-button:hover .tooltip,.upload-icon-container:hover .tooltip,.apps-icon-container:hover .tooltip, .notification-icon-container:hover .tooltip{
+    opacity: 1;
+}
+
+.upload-icon {
+    height: 24px;
+}
+
+.apps-icon {
+    height: 24px;
+}
+
+.notification-icon {
+    height: 24px;
+}
+
+.current-user-picture {
+    height: 32px;
+    border-radius: 16px;
+}
+
+.notification-icon-container {
+    position: relative;
+}
+
+.notification-count {
+    background-color: rgb(204, 0, 0);
+    position: absolute;
+    top: -3px;
+    right: -5px;
+    font-size: 10px;
+    font-family: Roboto, Arial;
+    padding: 3px 6px;
+    border-radius: 12px;
+    color: white;
+}
